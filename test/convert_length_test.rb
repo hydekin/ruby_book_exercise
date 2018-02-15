@@ -4,10 +4,10 @@ require './lib/convert_length'
 # unit test for convert_length
 class ConvertLengthTest < Minitest::Test
   def test_convert_length
-    assert_equal 39.37, convert_length(1, 'm', 'in')
-    assert_equal 0.38, convert_length(15, 'in', 'm')
-    assert_equal 100, convert_length(1, 'm', 'cm')
-    assert_equal 0.01, convert_length(1, 'cm', 'm')
-    assert_equal 10670.73, convert_length(35000, 'ft', 'm')
+    assert_equal 39.37, convert_length(1, from: :m, to: :in)
+    assert_equal 0.38, convert_length(15, from: :in, to: :m)
+    assert_equal 100, convert_length(1, from: :m, to: :cm)
+    assert_equal 0.01, convert_length(1, from: :cm, to: :m)
+    assert_equal 10670.73, convert_length(35000, from: :ft, to: :m)
   end
 end
