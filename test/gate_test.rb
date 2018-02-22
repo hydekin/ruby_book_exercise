@@ -11,7 +11,7 @@ class GateTest < Minitest::Test
     assert juso.exit ticket
   end
 
-  def test_梅田から三国間で運賃不足
+  def test_umeda_to_mikuni_when_fare_is_not_enough
     umeda  = Gate.new :umeda
     mikuni = Gate.new :mikuni
     ticket = Ticket.new 150
